@@ -10,7 +10,7 @@ router.get(`${endpoint_storage}/:tiendaId/:type/:path`, async (req, res)=>{
 
 router.post(`${endpoint_storage}/:tiendaId/:type/upload`, upload.single('fileImage') , (req, res, next) => {
     const file = req.file
-    console.log(req.file)
+    console.log(req)
     if (!file) {
         const error = new Error('Please upload a file')
         error.httpStatusCode = 400

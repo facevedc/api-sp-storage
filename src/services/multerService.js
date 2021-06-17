@@ -3,7 +3,7 @@ const { repo_imgs } = require("../config/constant.config");
 const fileExtension = require('file-extension');
 const existFolder = require('../utils/foldersUtil');
 const ImageNotFoundError = require('../error/imageNorFoundError');
-const { AccessService } = require('../../../../../lib/storebypyme-back-db-library/src');
+const { AccessService } = require('storebypyme-back-db-library');
 
 const validateAccess = async (req) => {
     try {
