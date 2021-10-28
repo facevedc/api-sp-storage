@@ -1,7 +1,7 @@
 const messages = {
-    notFoundImage: 'Image was not found'
-} 
+  notFoundImage: "Image was not found",
+};
 
 module.exports = {
-    messages
-}
+  messages,
+};
