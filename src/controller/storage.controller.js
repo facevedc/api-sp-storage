@@ -1,10 +1,10 @@
-const { repo_imgs } = require("../config/constant.config");
-const storageService = require("../services/storageService");
-const { AccessService } = require("storebypyme-back-db-library");
-const logger = require("../utils/logger.util");
+const { repo_imgs } = require('../config/constant.config');
+const storageService = require('../services/storageService');
+const { AccessService } = require('@felipe.acevedo91/storebypyme-back-db-library');
+const logger = require('../utils/logger.util');
 
 async function errorResponse(res) {
-  res.status(404).send({ data: "not found" });
+  res.status(404).send({ data: 'not found' });
 }
 
 const getImages = async (req, res) => {

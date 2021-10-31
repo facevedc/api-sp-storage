@@ -17,6 +17,8 @@
   "author": "Felipe Acevedo",
   "license": "ISC",
   "dependencies": {
+    "@felipe.acevedo91/storebypyme-back-db-library": "^1.0.3",
+    "@felipe.acevedo91/storebypyme-back-logger-library": "^1.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -24,8 +26,6 @@
     "file-extension": "^4.0.5",
     "fs": "0.0.1-security",
     "multer": "^1.4.2",
-    "path": "^0.12.7",
-    "storebypyme-back-db-library": "file:../../lib/storebypyme-back-db-library",
-    "storebypyme-back-logger-library": "file:../../lib/storebypyme-back-logger-library"
+    "path": "^0.12.7"
   }
 }

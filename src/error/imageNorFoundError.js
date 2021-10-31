@@ -1,4 +1,4 @@
-const messages = require("../config/errorMessage").messages;
+const messages = require('../config/errorMessage').messages;
 
 class ImageNotFoundError extends Error {
   constructor(error) {

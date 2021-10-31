@@ -1,10 +1,9 @@
-const multer = require("multer");
-const { repo_imgs } = require("../config/constant.config");
-const fileExtension = require("file-extension");
-const existFolder = require("../utils/foldersUtil");
-const ImageNotFoundError = require("../error/imageNorFoundError");
-const { AccessService } = require("storebypyme-back-db-library");
-const logger = require("../utils/logger.util");
+const multer = require('multer');
+const { repo_imgs } = require('../config/constant.config');
+const fileExtension = require('file-extension');
+const existFolder = require('../utils/foldersUtil');
+const ImageNotFoundError = require('../error/imageNorFoundError');
+const { AccessService } = require('@felipe.acevedo91/storebypyme-back-db-library');
 
 const validateAccess = async (req) => {
   try {
@@ -22,15 +21,12 @@ const storage = multer.diskStorage({
       existFolder(req.params.tiendaId, req.params.type);
       cb(null, `${repo_imgs}/${req.params.tiendaId}/${req.params.type}`);
     } else {
-      cb(new ImageNotFoundError("Not authorized"));
+      cb(new ImageNotFoundError('Not authorized'));
     }
   },
   // Setting name of file saved
   filename: (req, file, cb) => {
-    cb(
-      null,
-      file.originalname.split(".")[0] + "." + fileExtension(file.originalname)
-    );
+    cb(null, file.originalname.split('.')[0] + '.' + fileExtension(file.originalname));
   },
 });
 
@@ -43,7 +39,7 @@ const upload = multer({
   fileFilter(req, file, cb) {
     if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
       //Error
-      cb(new ImageNotFoundError("Please upload JPG and PNG images only!"));
+      cb(new ImageNotFoundError('Please upload JPG and PNG images only!'));
     } else {
       //Success
       cb(null, true);
