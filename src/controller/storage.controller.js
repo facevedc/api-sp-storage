@@ -1,6 +1,6 @@
 const { repo_imgs } = require('../config/constant.config');
 const storageService = require('../services/storageService');
-const { AccessService } = require('@felipe.acevedo91/storebypyme-back-db-library');
+const { AccessService } = require('@facevedc/storebypyme-back-db-library');
 const logger = require('../utils/logger.util');
 
 async function errorResponse(res) {

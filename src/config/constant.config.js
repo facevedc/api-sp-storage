@@ -5,5 +5,5 @@ module.exports = {
   cors_dns: process.env.CORS_DNS,
   profile: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 7206,
-  repo_imgs: process.env.REPOSITORY_IMGS,
+  repo_imgs: `${process.env.REPOSITORY}/images`,
 };

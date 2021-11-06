@@ -1,13 +1,16 @@
 FROM node:14
 
-WORKDIR /usr/src/app
+WORKDIR /usr/app/
 
+COPY .npmrc ./
 COPY ./package*.json ./
 
-RUN npm install
+RUN npm install --only=prod
+RUN rm -f .npmrc
 
 COPY . .
 
-EXPOSE 7204
+ENV PORT 8080
+EXPOSE ${PORT}
 
 CMD ["npm", "start"]

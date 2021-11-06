@@ -1,6 +1,6 @@
 {
   "name": "api-sp-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "api storage images server",
   "main": "src/index.js",
   "scripts": {
@@ -17,9 +17,8 @@
   "author": "Felipe Acevedo",
   "license": "ISC",
   "dependencies": {
-    "@felipe.acevedo91/storebypyme-back-db-library": "^1.0.3",
-    "@felipe.acevedo91/storebypyme-back-logger-library": "^1.0.1",
-    "body-parser": "^1.19.0",
+    "@facevedc/storebypyme-back-db-library": "^1.0.1",
+    "@facevedc/storebypyme-back-logger-library": "^1.0.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

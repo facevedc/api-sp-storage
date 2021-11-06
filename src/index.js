@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { cors_dns, profile, port } = require('./config/constant.config');
-const config = require('@felipe.acevedo91/storebypyme-back-db-library').ConfigDb;
+const config = require('@facevedc/storebypyme-back-db-library').ConfigDb;
 const app = express();
 const router = require('./route/route');
 const logger = require('./utils/logger.util');
